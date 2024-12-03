@@ -13,7 +13,8 @@ qBittorrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程�
 
 运行程序时，可以使用以下命令行参数：
 
-```
+```bash
+./qBittorrent-manager -url <qb_url> -username <username> -password <password> -recordFile <record_file> -ratioIncrease <ratio> -protectionPeriod <days> -try <true|false>
 ```
 
 
@@ -28,7 +29,7 @@ qBittorrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程�
 运行例子：
 
 ```bash
-./torrent-manager -url http://localhost:8080 -username admin -password adminadmin -recordFile torrent-records.json -ratioIncrease 0.5 -protectionPeriod 7 -try false
+./qBittorrent-manager -url http://localhost:8080 -username admin -password adminadmin -recordFile torrent-records.json -ratioIncrease 0.5 -protectionPeriod 7 -try false
 ```
 
 # 二次开发
@@ -68,7 +69,7 @@ cd <repository-directory>
 修改代码后，使用以下命令编译程序：
    
 ```bash
-go build -o torrent-manager
+go build -o qBittorrent-manager
 ```
 
 # 其他

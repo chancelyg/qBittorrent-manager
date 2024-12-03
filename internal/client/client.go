@@ -78,9 +78,10 @@ func (c *Client) GetTorrents() ([]models.Torrent, error) {
 	return torrents, nil
 }
 
-// 删除种子
-func (c *Client) DeleteTorrent(hash string) error {
-	data := fmt.Sprintf("hashes=%s", hash)
+// DeleteTorrent 删除种子及其下载的内容
+func (c *Client) DeleteTorrent(hash string, deleteFiles bool) error {
+	// 创建请求数据
+	data := fmt.Sprintf("hashes=%s&deleteFiles=%t", hash, deleteFiles)
 	req, err := http.NewRequest("POST", c.qbURL+"/api/v2/torrents/delete", bytes.NewBufferString(data))
 	if err != nil {
 		return err

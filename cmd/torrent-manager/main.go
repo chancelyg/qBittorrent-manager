@@ -59,7 +59,7 @@ func main() {
 
 			if torrent.Ratio-record.Ratio < *ratioIncrease {
 				fmt.Printf("Deleting torrent <%s> due to insufficient share ratio increase (ratio increase %.2f).\n", torrent.Name, torrent.Ratio-record.Ratio)
-				if err := qbClient.DeleteTorrent(torrent.Hash); err != nil && !*try {
+				if err := qbClient.DeleteTorrent(torrent.Hash, true); err != nil && !*try {
 					fmt.Printf("Failed to delete torrent %s error: %v\n", torrent.Name, err)
 				}
 			}

@@ -1,6 +1,4 @@
-# 1. Torrent Manager
-
-Torrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程序，用于登录 qBittorrent Web UI，获取种子信息，并根据上传率（Ratio）自动删除不符合条件的种子。
+Qbittorrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程序，用于登录 qBittorrent Web UI，获取种子信息，并根据上传率（Ratio）自动删除不符合条件的种子。
 
 ## 1.1. 功能
 
@@ -24,7 +22,7 @@ Torrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程序�
 - `-password`：qBittorrent Web UI 的密码，默认值为 `adminadmin`
 - `-recordFile`：用于保存种子记录的文件名，默认值为 `torrent-records.json`
 - `-ratioIncrease`：每次检查时，上传率的最小增长值，默认值为 `0.5`
-- `-protectionPeriod`：种子的保护期（以天为单位），默认值为 `7`
+- `-protectionPeriod`：种子的保护期（以天为单位），默认值为 `7`，在此期间内即使上传率不佳也不会被删除
 - `-try`：如果设置为 `true`，则仅显示将要删除的种子，但不会真的执行删除操作，方便测试
 
 运行例子：

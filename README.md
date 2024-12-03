@@ -1,4 +1,4 @@
-Qbittorrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程序，用于登录 qBittorrent Web UI，获取种子信息，并根据上传率（Ratio）自动删除不符合条件的种子。
+qBittorrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程序，用于登录 qBittorrent Web UI，获取种子信息，并根据上传率（Ratio）自动删除不符合条件的种子。
 
 # 功能
 
@@ -14,7 +14,6 @@ Qbittorrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程�
 运行程序时，可以使用以下命令行参数：
 
 ```
-./torrent-manager -url <qb_url> -username <username> -password <password> -recordFile <record_file> -ratioIncrease <ratio> -protectionPeriod <days> -try <true|false>
 ```
 
 

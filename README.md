@@ -1,14 +1,15 @@
 Qbittorrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程序，用于登录 qBittorrent Web UI，获取种子信息，并根据上传率（Ratio）自动删除不符合条件的种子。
 
-## 1.1. 功能
+# 功能
 
+主要功能：
 - 登录到 qBittorrent Web UI
 - 获取当前所有种子的状态
 - 根据设定的上传率增长条件自动删除种子
 - 本地保存种子记录，以便后续比对上传率
 - 支持保护期设置，防止在保护期内删除种子
 
-## 1.2. 用法
+# 用法
 
 运行程序时，可以使用以下命令行参数：
 
@@ -31,7 +32,7 @@ Qbittorrent Manager 是一个用于管理和监控 qBittorrent 种子的 Go 程�
 ./torrent-manager -url http://localhost:8080 -username admin -password adminadmin -recordFile torrent-records.json -ratioIncrease 0.5 -protectionPeriod 7 -try false
 ```
 
-## 1.3. 二次开发
+# 二次开发
 确保开发环境中已安装 Go 语言，可以按照 [Go 官方文档](https://golang.org/doc/install) 中的说明进行安装
 
 将此项目克隆到本地：
@@ -71,16 +72,16 @@ cd <repository-directory>
 go build -o torrent-manager
 ```
 
-## 1.4. 其他
+# 其他
 
 - 请确保有正确的 qBittorrent Web UI 登录凭据
 - 本程序将会读取和写入 `torrent-records.json` 文件，请确保有适当的文件权限
 - 在删除种子之前，可以使用 `-try` 参数来预览将要删除的种子
 
-## 1.5. 贡献
+# 贡献
 
 欢迎任何人对本项目提出改进建议或贡献代码！请提交 Pull Request 或在问题追踪器中报告问题
 
-## 1.6. 许可证
+# 许可证
 
 本项目采用 [MIT 许可证](LICENSE)
